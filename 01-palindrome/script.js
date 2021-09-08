@@ -14,7 +14,25 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+  let result; //переменная для результата
+  typeof str !== 'string' ? result = str+ ' - значение не является строкой' : str = str.replace(/[^a-zа-яё]/gi, '');
+  //погуглила, теперь знаю о регулярных выражениях =)
+  const len = str.length; //длина строки
+  if (str == '') {
+    result = true;
+  }
+
+  for (let i = 0; i < len; i++) {
+
+      if (str[i].trim().toUpperCase() === str[len-1-i].trim().toUpperCase()) {
+        result = true;
+      }     
+    else {
+      result = false;
+    }
+
+  }
+  return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -22,6 +40,8 @@ function palindrome(str) {
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
+console.log(palindrome('')); // true?!
+console.log(palindrome(434353454)); 
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,

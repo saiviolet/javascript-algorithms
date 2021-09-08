@@ -9,9 +9,15 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    if (n <= 0) return false;
+    switch (n) {
+        case 1: return 0;
+        case 2: 
+        case 3: return 1;
+        default: return (fibonacci(n - 1) + fibonacci(n - 2));
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(fibonacci(4)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)
+console.log(fibonacci(0)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)

@@ -7,7 +7,11 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+    let newstr;
+    for (i = 0; i < str.length; i++) {
+        newstr = str[0].toUpperCase() + str.slice(1);
+    }
+return newstr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

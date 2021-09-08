@@ -8,7 +8,9 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    if (n < 0) return false
+    else if (n < 2) return 1;
+    return (n * factorial(n - 1));
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

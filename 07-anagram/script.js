@@ -10,9 +10,17 @@
 
 function anagram(str1, str2) {
     // Напишите код здесь
+    let an = 0;
+    str1.toLowerCase().split('').forEach(element => {
+        str2.toLowerCase().split('').forEach(item => {
+            
+        });
+    });
+
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('hello', 'bye')); // false
+console.log(anagram('vio', 'ovi')); 

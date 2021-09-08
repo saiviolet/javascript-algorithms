@@ -8,7 +8,11 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    //return [...new Set(arr)];  - немного читерства хДДДД узнала об объекте Сет и спред) но ниже еще вариант с фильтер =)
+    const newarr = arr.filter((item, index) => {
+        return arr.indexOf(item) === index;
+    })
+    return newarr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

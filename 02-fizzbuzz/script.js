@@ -11,9 +11,23 @@
 */
 
 function fizzBuzz(num) {
-    // Напишите код здесь
+let result =[];
+if (typeof num !== 'number') {console.log(num+' - не число')}
+else if (num === 0) {console.log('Ноль не является натуральным числом')}
+else {
+  for (i = 0; i < num; i++) {
+    result[i] = i+1;
+    if (result[i] % 3 === 0 && result[i] % 5 === 0) {result[i]='fizzbuzz'}
+    else if (result[i] % 3 == 0) {result[i] = 'fizz'}
+    else if (result[i] % 5 == 0) {result[i] = 'buzz'}
+    console.log(result[i]);
+  }
 }
+
+}
+
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(fizzBuzz(15));
+fizzBuzz(15);
