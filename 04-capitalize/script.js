@@ -7,11 +7,18 @@
 */
 
 function capitalize(str) {
-    let newstr;
-    for (i = 0; i < str.length; i++) {
-        newstr = str[0].toUpperCase() + str.slice(1);
+    let newstr = [];
+    let str1 = str.split(' ');
+    for (let i = 0; i < str1.length; i++) {
+        newstr[i] = str1[i].charAt(0).toUpperCase() + str1[i].slice(1);
     }
-return newstr;
+    return newstr.join(' ');
+    //дальше элегантно =)
+//     const newstr = str
+//         .split(' ')
+//         .map(item => item.charAt(0).toUpperCase() + item.slice(1))
+//         .join(' ');
+//  return newstr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

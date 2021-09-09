@@ -10,12 +10,12 @@
 
 function anagram(str1, str2) {
     // Напишите код здесь
-    let an = 0;
-    str1.toLowerCase().split('').forEach(element => {
-        str2.toLowerCase().split('').forEach(item => {
+    // let an = 0;
+    // str1.toLowerCase().split('').forEach(element => {
+    //     str2.toLowerCase().split('').forEach(item => {
             
-        });
-    });
+    //     });
+    // });
 
 }
 
